@@ -1,0 +1,21 @@
+
+Новий проект
+dotnet new console
+
+Драйвер Npgsql
+dotnet add package Npgsql --version 7.0.0
+
+GtkSharp
+dotnet add package GtkSharp --version 3.24.24.38
+
+--------------------------------------------
+
+CREATE TABLE tab3
+(
+    id serial NOT NULL,
+    parentid integer,
+    name text,
+    PRIMARY KEY (id)
+);
+
+CREATE INDEX IF NOT EXISTS tab3_parentid_idx ON tab3 (parentid);
